@@ -1,0 +1,457 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mim:  <http://modellen.geostandaarden.nl/def/mim#> .
+@prefix ex:   <http://example.org/mim-demo#> .
+
+#################################################################
+# Informatiemodel en Package
+#################################################################
+
+ex:IMDemo a mim:Informatiemodel ;
+  mim:basisUri            "http://example.org/mim-demo#"^^xsd:anyURI ;
+  mim:identificatie       "http://example.org/mim-demo#IMDemo"^^xsd:anyURI ;
+  mim:naam                "IM Demo"@nl ;
+  mim:alias               "Demomodel"@nl ;
+  mim:informatiemodeltype skos:Concept ;         # placeholder; in echt: concept uit mim:Informatiemodeltypen
+  mim:informatiedomein    "Voorbeeld domein" ;
+  mim:relatiemodelleringstype skos:Concept ;     # placeholder; in echt: concept uit mim:Relatiemodelleringstypen
+  mim:mimversie           "1.2" ;
+  mim:mimtaal             "nl" ;
+  mim:tekstopmaak         "markdown" ;
+  mim:datumOpname         "2025-09-05"^^xsd:date ;
+  mim:bevatModelelement   ex:PkgBasis
+.
+
+ex:PkgBasis a mim:Package ;
+  mim:basisUri       "http://example.org/mim-demo#"^^xsd:anyURI ;
+  mim:identificatie  "http://example.org/mim-demo#PkgBasis"^^xsd:anyURI ;
+  mim:naam           "Basis"@nl ;
+  mim:alias          "Core"@nl ;
+  mim:bevatModelelement ex:Persoon, ex:Adres, ex:woontOp, ex:RelKlasseVoorbeeld,
+                        ex:Persoonsgegevens, ex:PersoonsgegevensType,
+                        ex:Geslacht, ex:GeslachtM, ex:GeslachtV,
+                        ex:Tekst255, ex:Postcode, ex:Datum,
+                        ex:LandcodeLijst, ex:LandcodeElementNL, ex:LandcodeElementBE,
+                        ex:SubTypePersoon, ex:GeneralisatiePersoon, ex:KeuzeContact
+.
+
+#################################################################
+# (Primitieve) Datatypen
+#################################################################
+
+ex:Tekst255 a mim:PrimitiefDatatype ;
+  mim:identificatie  "http://example.org/mim-demo#Tekst255"^^xsd:anyURI ;
+  mim:naam           "Tekst255"@nl ;
+  mim:definitie      "Vrije tekst tot 255 tekens."@nl ;
+  mim:lengte         "255"
+.
+
+ex:Datum a mim:PrimitiefDatatype ;
+  mim:identificatie  "http://example.org/mim-demo#Datum"^^xsd:anyURI ;
+  mim:naam           "Datum"@nl ;
+  mim:definitie      "Kalenderdatum (YYYY-MM-DD)."@nl ;
+  mim:patroon        "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+.
+
+# Gestructureerd datatype voor Postcode
+ex:Postcode a mim:GestructureerdDatatype ;
+  mim:identificatie  "http://example.org/mim-demo#Postcode"^^xsd:anyURI ;
+  mim:naam           "Postcode"@nl ;
+  mim:definitie      "Nederlandse postcode bestaande uit vier cijfers en twee letters."@nl ;
+  mim:dataElement    ex:pc
+.
+
+ex:pc a mim:DataElement ;
+  mim:identificatie  "http://example.org/mim-demo#pc"^^xsd:anyURI ;
+  mim:naam           "waarde"@nl ;
+  mim:definitie      "De postcodewaarde."@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:patroon        "^[1-9][0-9]{3}[A-Z]{2}$" ;
+  mim:kardinaliteit  "1..1" ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+#################################################################
+# Enumeratie (Codelijst/Enumeratiewaarden)
+#################################################################
+
+ex:Geslacht a mim:Enumeratie ;
+  mim:identificatie  "http://example.org/mim-demo#Geslacht"^^xsd:anyURI ;
+  mim:naam           "Geslacht"@nl ;
+  mim:definitie      "Lijst van mogelijke geslachten."@nl ;
+  mim:waarde         ex:GeslachtM, ex:GeslachtV ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:GeslachtM a mim:Enumeratiewaarde ;
+  mim:identificatie  "http://example.org/mim-demo#GeslachtM"^^xsd:anyURI ;
+  mim:naam           "Man"@nl ;
+  mim:code           "M" ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:GeslachtV a mim:Enumeratiewaarde ;
+  mim:identificatie  "http://example.org/mim-demo#GeslachtV"^^xsd:anyURI ;
+  mim:naam           "Vrouw"@nl ;
+  mim:code           "V" ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+#################################################################
+# Referentielijst (voorbeeld met externe lijst)
+#################################################################
+
+ex:LandcodeLijst a mim:Referentielijst ;
+  mim:identificatie  "http://example.org/mim-demo#LandcodeLijst"^^xsd:anyURI ;
+  mim:naam           "ISO 3166-1 alpha-2 landcodes"@nl ;
+  mim:locatie        "https://www.iso.org/iso-3166-country-codes.html" ;
+  mim:referentieElement ex:LandcodeElementNL, ex:LandcodeElementBE ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:LandcodeElementNL a mim:ReferentieElement ;
+  mim:identificatie  "http://example.org/mim-demo#LandcodeElementNL"^^xsd:anyURI ;
+  mim:naam           "Nederland"@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:code           "NL" ;
+  mim:kardinaliteit  "1..1" ;
+  mim:identificerend true ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:LandcodeElementBE a mim:ReferentieElement ;
+  mim:identificatie  "http://example.org/mim-demo#LandcodeElementBE"^^xsd:anyURI ;
+  mim:naam           "België"@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:code           "BE" ;
+  mim:kardinaliteit  "1..1" ;
+  mim:identificerend true ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+#################################################################
+# Objecttypen met attributen en gegevensgroep
+#################################################################
+
+ex:Persoon a mim:Objecttype ;
+  mim:identificatie  "http://example.org/mim-demo#Persoon"^^xsd:anyURI ;
+  mim:naam           "Persoon"@nl ;
+  mim:definitie      "Een natuurlijk persoon."@nl ;
+  mim:datumOpname    "2025-09-05"^^xsd:date ;
+  mim:attribuut      ex:bsn, ex:naam, ex:geboortedatum, ex:geslacht ;
+  mim:gegevensgroep  ex:Persoonsgegevens ;
+  mim:indicatieAbstractObject false ;
+  mim:populatie      "Alle ingeschreven personen in het domein." ;
+  mim:kwaliteit      "Bron: bevolkingsregister." ;
+  mim:toelichting    "Voorbeeldobject in het demomodel."
+.
+
+ex:Adres a mim:Objecttype ;
+  mim:identificatie  "http://example.org/mim-demo#Adres"^^xsd:anyURI ;
+  mim:naam           "Adres"@nl ;
+  mim:definitie      "Een postadres."@nl ;
+  mim:datumOpname    "2025-09-05"^^xsd:date ;
+  mim:attribuut      ex:straat, ex:huisnummer, ex:postcodeAttr, ex:landcode ;
+  mim:indicatieAbstractObject false
+.
+
+# Attributen Persoon
+ex:bsn a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#bsn"^^xsd:anyURI ;
+  mim:naam           "Burgerservicenummer"@nl ;
+  mim:definitie      "Unieke identificatie van een persoon."@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:kardinaliteit  "1..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:naam a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#naam"^^xsd:anyURI ;
+  mim:naam           "Naam"@nl ;
+  mim:definitie      "De volledige naam."@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:kardinaliteit  "1..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:geboortedatum a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#geboortedatum"^^xsd:anyURI ;
+  mim:naam           "Geboortedatum"@nl ;
+  mim:definitie      "De geboortedatum van de persoon."@nl ;
+  mim:type           ex:Datum ;
+  mim:kardinaliteit  "1..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:geslacht a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#geslacht"^^xsd:anyURI ;
+  mim:naam           "Geslacht"@nl ;
+  mim:definitie      "Geslacht van de persoon."@nl ;
+  mim:type           ex:Geslacht ;
+  mim:kardinaliteit  "0..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend true ;
+  mim:mogelijkGeenWaarde true ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+# Attributen Adres
+ex:straat a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#straat"^^xsd:anyURI ;
+  mim:naam           "Straat"@nl ;
+  mim:definitie      "Straatnaam."@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:kardinaliteit  "1..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:huisnummer a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#huisnummer"^^xsd:anyURI ;
+  mim:naam           "Huisnummer"@nl ;
+  mim:definitie      "Huisnummer."@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:kardinaliteit  "1..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:postcodeAttr a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#postcodeAttr"^^xsd:anyURI ;
+  mim:naam           "Postcode"@nl ;
+  mim:definitie      "Nederlandse postcode."@nl ;
+  mim:type           ex:Postcode ;
+  mim:kardinaliteit  "1..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:landcode a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#landcode"^^xsd:anyURI ;
+  mim:naam           "Landcode"@nl ;
+  mim:definitie      "ISO 3166-1 alpha-2 landcode."@nl ;
+  mim:type           ex:LandcodeLijst ;
+  mim:kardinaliteit  "1..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+#################################################################
+# Gegevensgroep + -type
+#################################################################
+
+ex:Persoonsgegevens a mim:Gegevensgroep ;
+  mim:identificatie  "http://example.org/mim-demo#Persoonsgegevens"^^xsd:anyURI ;
+  mim:naam           "Persoonsgegevens"@nl ;
+  mim:gegevensgroeptype ex:PersoonsgegevensType ;
+  mim:kardinaliteit  "0..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:PersoonsgegevensType a mim:Gegevensgroeptype ;
+  mim:identificatie  "http://example.org/mim-demo#PersoonsgegevensType"^^xsd:anyURI ;
+  mim:naam           "PersoonsgegevensType"@nl ;
+  mim:definitie      "Groep met aanvullende persoonsgegevens."@nl ;
+  mim:attribuut      ex:voornamen, ex:achternaam ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:voornamen a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#voornamen"^^xsd:anyURI ;
+  mim:naam           "Voornamen"@nl ;
+  mim:definitie      "Eerste en eventuele middennamen."@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:kardinaliteit  "0..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde true ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:achternaam a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#achternaam"^^xsd:anyURI ;
+  mim:naam           "Achternaam"@nl ;
+  mim:definitie      "Familienaam."@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:kardinaliteit  "1..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+#################################################################
+# Relatiesoort en Relatieklasse
+#################################################################
+
+ex:woontOp a mim:Relatiesoort ;
+  mim:identificatie  "http://example.org/mim-demo#woontOp"^^xsd:anyURI ;
+  mim:naam           "woont op"@nl ;
+  mim:definitie      "Relatie die aangeeft op welk adres een persoon woont."@nl ;
+  mim:unidirectioneel true ;
+  mim:bron           ex:Persoon ;
+  mim:doel           ex:Adres ;
+  mim:aggregatietype mim:Geen ;
+  mim:kardinaliteit  "0..*" ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+# Voorbeeld relatieklasse die extra gegevens op de relatie vastlegt
+ex:RelKlasseVoorbeeld a mim:Relatieklasse ;
+  mim:identificatie  "http://example.org/mim-demo#RelKlasseVoorbeeld"^^xsd:anyURI ;
+  mim:naam           "Bewoond sinds"@nl ;
+  mim:definitie      "Relatieklasse voor de relatie Persoon-woontOp-Adres met ingangsdatum."@nl ;
+  mim:unidirectioneel true ;
+  mim:aggregatietype mim:Geen ;
+  mim:kardinaliteit  "0..*" ;
+  mim:attribuut      ex:ingangsdatum ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:ingangsdatum a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#ingangsdatum"^^xsd:anyURI ;
+  mim:naam           "Ingangsdatum"@nl ;
+  mim:definitie      "Datum waarop de bewoning startte."@nl ;
+  mim:type           ex:Datum ;
+  mim:kardinaliteit  "1..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+#################################################################
+# Generalisatie (subtype/supertype) + Keuze
+#################################################################
+
+ex:SubTypePersoon a mim:Objecttype ;
+  mim:identificatie  "http://example.org/mim-demo#SubTypePersoon"^^xsd:anyURI ;
+  mim:naam           "Inwoner"@nl ;
+  mim:definitie      "Persoon die ingeschreven staat in de gemeente."@nl ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:GeneralisatiePersoon a mim:Generalisatie ;
+  mim:identificatie  "http://example.org/mim-demo#GeneralisatiePersoon"^^xsd:anyURI ;
+  mim:subtype        ex:SubTypePersoon ;
+  mim:supertype      ex:Persoon ;
+  mim:mixin          false ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+# Keuze-constructie (voorbeeld: contact via telefoon of email)
+ex:KeuzeContact a mim:Keuze ;
+  mim:identificatie  "http://example.org/mim-demo#KeuzeContact"^^xsd:anyURI ;
+  mim:naam           "Contactkeuze"@nl ;
+  mim:definitie      "Contact kan ofwel telefoon ofwel e-mail zijn."@nl ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:telefoon a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#telefoon"^^xsd:anyURI ;
+  mim:naam           "Telefoon"@nl ;
+  mim:definitie      "Telefoonnummer."@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:kardinaliteit  "0..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde true ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
+
+ex:email a mim:Attribuutsoort ;
+  mim:identificatie  "http://example.org/mim-demo#email"^^xsd:anyURI ;
+  mim:naam           "E-mailadres"@nl ;
+  mim:definitie      "E-mailadres."@nl ;
+  mim:type           ex:Tekst255 ;
+  mim:kardinaliteit  "0..1" ;
+  mim:authentiek     skos:Concept ;
+  mim:heeftTijdlijnGeldigheid false ;
+  mim:indicatieMaterieleHistorie false ;
+  mim:indicatieFormeleHistorie  false ;
+  mim:heeftTijdlijnRegistratie  false ;
+  mim:indicatieAfleidbaar false ;
+  mim:indicatieClassificerend false ;
+  mim:mogelijkGeenWaarde true ;
+  mim:datumOpname    "2025-09-05"^^xsd:date
+.
