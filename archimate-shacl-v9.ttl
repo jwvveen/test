@@ -18905,862 +18905,191 @@ shape:WorkPackage a sh:NodeShape ;
     foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_WorkPackage.png> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ApplicationCollaboration> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ApplicationComponent> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ApplicationEvent> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ApplicationFunction> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ApplicationInteraction> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ApplicationInterface> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ApplicationProcess> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ApplicationService> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Artifact> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Assessment> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessActor> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessCollaboration> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessEvent> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessFunction> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessInteraction> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessInterface> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessObject> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessProcess> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessRole> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/BusinessService> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Capability> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/CommunicationNetwork> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Constraint> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Contract> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/CourseOfAction> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/DataObject> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Deliverable> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Device> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/DistributionNetwork> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Driver> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Equipment> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Facility> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Gap> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Goal> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Grouping> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ImplementationEvent> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Junction> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Location> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Material> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Meaning> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Node> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Outcome> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Path> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Plateau> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Principle> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Product> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Relationship> a owl:Class ;
-    rdfs:subClassOf [ ],
+    rdfs:subClassOf 
         <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Representation> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Requirement> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Resource> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Stakeholder> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/SystemSoftware> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/TechnologyCollaboration> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/TechnologyEvent> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/TechnologyFunction> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/TechnologyInteraction> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/TechnologyInterface> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/TechnologyProcess> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/TechnologyService> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/Value> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/ValueStream> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/WorkPackage> a owl:Class ;
-    rdfs:subClassOf [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        [ ],
-        <http://www.opengroup.org/xsd/archimate/3.0/Element> .
+    rdfs:subClassOf <http://www.opengroup.org/xsd/archimate/3.0/Element> .
 
 <http://www.opengroup.org/xsd/archimate/3.0/hasProperty> a owl:ObjectProperty ;
     rdfs:domain <http://www.opengroup.org/xsd/archimate/3.0/Element> ;
