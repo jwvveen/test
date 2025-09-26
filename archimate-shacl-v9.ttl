@@ -11945,6 +11945,11 @@ shape:Rel_Requirement_Composition a sh:NodeShape ;
         "eis"@nl ;
     sh:property [ a sh:PropertyShape ;
             sh:group shape:RelationEndsGroup ;
+            sh:hasValue <http://www.begrippenxl.nl/archimate/nl/page/Requirement> ;
+            sh:nodeKind sh:IRI ;
+            sh:path prop:bron ],
+        [ a sh:PropertyShape ;
+            sh:group shape:RelationEndsGroup ;
             sh:in ( <http://www.begrippenxl.nl/archimate/nl/page/Constraint> <http://www.begrippenxl.nl/archimate/nl/page/Grouping> <http://www.begrippenxl.nl/archimate/nl/page/Requirement> ) ;
             sh:node [ a sh:NodeShape ;
                     sh:property [ a sh:PropertyShape ;
@@ -11952,11 +11957,6 @@ shape:Rel_Requirement_Composition a sh:NodeShape ;
                             sh:path rdf:type ] ] ;
             sh:nodeKind sh:IRI ;
             sh:path prop:doel ],
-        [ a sh:PropertyShape ;
-            sh:group shape:RelationEndsGroup ;
-            sh:hasValue <http://www.begrippenxl.nl/archimate/nl/page/Requirement> ;
-            sh:nodeKind sh:IRI ;
-            sh:path prop:bron ],
         shape:Description,
         shape:Label ;
     sh:targetClass relcls:Composition ;
@@ -15605,6 +15605,129 @@ shape:WorkPackage a sh:NodeShape ;
     sh:targetNode <http://www.begrippenxl.nl/archimate/nl/page/WorkPackage> ;
     foaf:img <https://cdn.wikixl.nl/images/archimate/png/v3/ArchiMate_WorkPackage.png> .
 
+<http://www.begrippenxl.nl/archimate/nl/page/AccessRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship> ;
+    skos:prefLabel "AccessRelationship"@en,
+        "toegangrelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/AggregationRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship> ;
+    skos:prefLabel "AggregationRelationship"@en,
+        "aggregatierelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/AndJunction> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector> ;
+    skos:prefLabel "AndJunction"@en,
+        "en-aansluiting"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/AssignmentRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship> ;
+    skos:prefLabel "AssignmentRelationship"@en,
+        "toewijzingrelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/AssociationRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship> ;
+    skos:prefLabel "AssociationRelationship"@en,
+        "associatierelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/CompositionRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship> ;
+    skos:prefLabel "CompositionRelationship"@en,
+        "samenstellingrelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/FlowRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship> ;
+    skos:prefLabel "FlowRelationship"@en,
+        "stroomrelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/InfluenceRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship> ;
+    skos:prefLabel "InfluenceRelationship"@en,
+        "invloedrelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/OrJunction> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector> ;
+    skos:prefLabel "OrJunction"@en,
+        "of-aansluiting"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/RealizationRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship> ;
+    skos:prefLabel "RealizationRelationship"@en,
+        "realisatierelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ServingRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship> ;
+    skos:prefLabel "ServingRelationship"@en,
+        "bedienrelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/SpecializationRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship> ;
+    skos:prefLabel "SpecializationRelationship"@en,
+        "specialisatierelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TriggeringRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship> ;
+    skos:prefLabel "TriggeringRelationship"@en,
+        "gebeurtenisrelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/DynamicRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/Relationship> ;
+    skos:prefLabel "Dynamic Relationship"@en,
+        "dynamische relatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/OtherRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/Relationship> ;
+    skos:prefLabel "Other Relationship"@en,
+        "overige relaties"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/RelationshipConnector> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate> ;
+    skos:prefLabel "Relationship Connector"@en,
+        "relatieconnector"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement> ;
+    skos:prefLabel "Strategy Behavior Element"@en,
+        "strategisch gedragselement"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate> skos:prefLabel "Concept"@en,
+        "concept"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/DependencyRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/Relationship> ;
+    skos:prefLabel "Dependency Relationship"@en,
+        "afhankelijkheidsrelatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement> ;
+    skos:prefLabel "External Active Structure Element"@en,
+        "externe actieve structuurelement"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/StructureElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/Element> ;
+    skos:prefLabel "Structure Element"@en,
+        "structureel element"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/Element> ;
+    skos:prefLabel "Behavior Element"@en,
+        "gedragselement"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/CompositeElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/Element> ;
+    skos:prefLabel "Composite Element"@en,
+        "samengesteld element"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Element> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate> ;
+    skos:prefLabel "Element"@en,
+        "element"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/StructuralRelationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/Relationship> ;
+    skos:prefLabel "Structural Relationship"@en,
+        "structurele relatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/StructureElement> ;
+    skos:prefLabel "Active Structure Element"@en,
+        "actieve structuurelement"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement> ;
+    skos:prefLabel "External Behavior Element"@en,
+        "extern gedragselement"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/StructureElement> ;
+    skos:prefLabel "Passive Structure Element"@en,
+        "passief structuurelement"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement> ;
+    skos:prefLabel "Internal Behavior Element"@en,
+        "intern gedragselement"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/Element> ;
+    skos:prefLabel "Motivation Element"@en,
+        "motivatie element"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement> ;
+    skos:prefLabel "Internal Active Structure Element"@en,
+        "interne actieve structuurelement"@nl .
+
 relcls:Assignment a owl:Class ;
     rdfs:label "AssignmentRelationship"@en ;
     skos:prefLabel "AssignmentRelationship"@en ;
@@ -15660,9 +15783,253 @@ relcls:Association a owl:Class ;
     skos:prefLabel "AssociationRelationship"@en ;
     sh:name "AssociationRelationship"@en .
 
+<http://www.begrippenxl.nl/archimate/nl/page/Relationship> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ConceptArchiMate> ;
+    skos:prefLabel "Relationship"@en,
+        "relatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Gap> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> ;
+    skos:prefLabel "Gap"@en,
+        "gemis"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Deliverable> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> ;
+    skos:prefLabel "Deliverable"@en,
+        "werkresultaat"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Plateau> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement> ;
+    skos:prefLabel "Plateau"@en,
+        "plateau"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ImplementationEvent> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> ;
+    skos:prefLabel "ImplementationEvent"@en,
+        "implementatiegebeurtenis"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/WorkPackage> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "WorkPackage"@en,
+        "werkpakket"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Representation> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> ;
+    skos:prefLabel "Representation"@en,
+        "representatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/DataObject> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> ;
+    skos:prefLabel "DataObject"@en,
+        "gegevensobject"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessObject> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> ;
+    skos:prefLabel "BusinessObject"@en,
+        "bedrijfsobject"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Contract> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> ;
+    skos:prefLabel "Contract"@en,
+        "contract"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Resource> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/StructureElement> ;
+    skos:prefLabel "Resource"@en,
+        "middel"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Material> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> ;
+    skos:prefLabel "Material"@en,
+        "materiaal"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Artifact> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/PassiveStructureElement> ;
+    skos:prefLabel "Artifact"@en,
+        "artefact"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Assessment> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Assessment"@en,
+        "beoordeling"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Driver> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Driver"@en,
+        "drijfveer"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Meaning> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Meaning"@en,
+        "betekenis"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Value> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Value"@en,
+        "waarde"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Capability> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement> ;
+    skos:prefLabel "Capability"@en,
+        "vermogen"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ValueStream> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/StrategyBehaviorElement> ;
+    skos:prefLabel "ValueStream"@en,
+        "waardestroom"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/CourseOfAction> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/BehaviorElement> ;
+    skos:prefLabel "CourseOfAction"@en,
+        "actieplan"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Stakeholder> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Stakeholder"@en,
+        "belanghebbende"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Principle> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Principle"@en,
+        "principe"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Constraint> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Constraint"@en,
+        "beperking"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Goal> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Goal"@en,
+        "doelstelling"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Outcome> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Outcome"@en,
+        "resultaat"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Requirement> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/MotivationElement> ;
+    skos:prefLabel "Requirement"@en,
+        "eis"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Location> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement> ;
+    skos:prefLabel "Location"@en,
+        "locatie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Product> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement> ;
+    skos:prefLabel "Product"@en,
+        "product"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/CommunicationNetwork> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement> ;
+    skos:prefLabel "CommunicationNetwork"@en,
+        "communicatie-infrastructuur"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/DistributionNetwork> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement> ;
+    skos:prefLabel "DistributionNetwork"@en,
+        "distributienetwerk"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Path> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ActiveStructureElement> ;
+    skos:prefLabel "Path"@en,
+        "connectiviteit"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyCollaboration> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "TechnologyCollaboration"@en,
+        "technologiesamenwerking"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessCollaboration> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "BusinessCollaboration"@en,
+        "bedrijfssamenwerking"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessActor> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "BusinessActor"@en,
+        "bedrijfsactor"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationCollaboration> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "ApplicationCollaboration"@en,
+        "applicatiesamenwerking"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessRole> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "BusinessRole"@en,
+        "bedrijfsrol"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Facility> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "Facility"@en,
+        "faciliteit"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Node> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "Node"@en,
+        "node"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationComponent> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "ApplicationComponent"@en,
+        "applicatiecomponent"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationEvent> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> ;
+    skos:prefLabel "ApplicationEvent"@en,
+        "applicatiegebeurtenis"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationInterface> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement> ;
+    skos:prefLabel "ApplicationInterface"@en,
+        "applicatie-interface"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyEvent> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> ;
+    skos:prefLabel "TechnologyEvent"@en,
+        "technologiegebeurtenis"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Equipment> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "Equipment"@en,
+        "uitrusting"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationFunction> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "ApplicationFunction"@en,
+        "applicatiefunctie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationInteraction> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "ApplicationInteraction"@en,
+        "applicatie-interactie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationProcess> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "ApplicationProcess"@en,
+        "applicatieproces"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessEvent> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> ;
+    skos:prefLabel "BusinessEvent"@en,
+        "bedrijfsgebeurtenis"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Device> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "Device"@en,
+        "infrastructuurelement"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyFunction> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "TechnologyFunction"@en,
+        "technologiefunctie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyInteraction> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "TechnologyInteraction"@en,
+        "technologieinteractie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyProcess> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "TechnologyProcess"@en,
+        "technologieproces"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/ApplicationService> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> ;
+    skos:prefLabel "ApplicationService"@en,
+        "applicatieservice"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyService> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> ;
+    skos:prefLabel "TechnologyService"@en,
+        "technologieservice"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessInterface> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement> ;
+    skos:prefLabel "BusinessInterface"@en,
+        "bedrijfsinterface"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessFunction> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "BusinessFunction"@en,
+        "bedrijfsfunctie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessInteraction> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "BusinessInteraction"@en,
+        "bedrijfsinteractie"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessProcess> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalBehaviorElement> ;
+    skos:prefLabel "BusinessProcess"@en,
+        "bedrijfsproces"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/SystemSoftware> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/InternalActiveStructureElement> ;
+    skos:prefLabel "SystemSoftware"@en,
+        "systeemsoftware"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/TechnologyInterface> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalActiveStructureElement> ;
+    skos:prefLabel "TechnologyInterface"@en,
+        "technologieinterface"@nl .
+
+<http://www.begrippenxl.nl/archimate/nl/page/BusinessService> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/ExternalBehaviorElement> ;
+    skos:prefLabel "BusinessService"@en,
+        "bedrijfsservice"@nl .
+
 prop:bron a owl:ObjectProperty .
 
 prop:doel a owl:ObjectProperty .
+
+<http://www.begrippenxl.nl/archimate/nl/page/Grouping> skos:broader <http://www.begrippenxl.nl/archimate/nl/page/CompositeElement> ;
+    skos:prefLabel "Grouping"@en,
+        "groepering"@nl .
 
 shape:Description a sh:PropertyShape ;
     sh:name "Description"@en,
