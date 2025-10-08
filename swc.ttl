@@ -1,1390 +1,753 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@prefix mim:  <https://www.softwarecatalogus.nl/ns/mim#> .
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix base: <https://www.softwarecatalogus.nl/model/> .
-
-@base <localhost://> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/biv-classificatiegegevens/beschikbaarheid>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"beschikbaarheid\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/biv-classificatiegegevens/integriteit>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"integriteit\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/biv-classificatiegegevens/vertrouwelijkheid>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"vertrouwelijkheid\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/achternaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"achternaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/email>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"email\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/tussenvoegsel>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"tussenvoegsel\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/voornaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"voornaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/contract/afloopdatum>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"afloopdatum\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/contract/contractnummer>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"contractnummer\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/contract/ingangsdatum>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"ingangsdatum\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/contract/titel>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"titel\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersaccount/gebruikersnaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"gebruikersnaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersaccount/wachtwoord>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"wachtwoord\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersrol/isaanspreekpunt>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"isAanspreekpunt\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersrol/roltype>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"roltype\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/koppeling/isintermediair>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"isIntermediair\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/koppeling/typekoppeling>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"typeKoppeling\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/kwetsbaarheid/kwetsbaarheidbeschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"kwetsbaarheidbeschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/organisatie/kvk-nummer>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"kvk-nummer\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/organisatie/organisatienaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"organisatienaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/organisatietype/organisatietypenaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"organisatietypeNaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur/referentiearchitectuurnaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"referentiearchitectuurNaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/datumwijzigingstatus>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"datumWijzigingStatus\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/externeurl>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"externeURL\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/naam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"naam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/omschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"omschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/referentieconcepttype>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"referentieconcepttype\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/status>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"status\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/naam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"naam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/objectid>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"objectID\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/omschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"omschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/referentierelatietype>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"referentierelatietype\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/review/reviewtekst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"reviewtekst\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/review/testrapporturl>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"testrapportURL\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/review/titel>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"titel\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/risicoanalyse/maatregelbeschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"maatregelBeschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/risicoanalyse/risicobeschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"risicobeschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/sector/omschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"omschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/sector/volledigenaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"volledigeNaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/beheerorganisatie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"beheerorganisatie\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/grondslag>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"grondslag\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/modelreferentie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"modelReferentie\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/omschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"omschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/standaardtype>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"standaardtype\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/standaardversie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"standaardversie\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/volledigenaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"volledigeNaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/compliancyinstrument>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"compliancyInstrument\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/compliancyinstrumenturl>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"compliancyInstrumentURL\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/datumwijzigingstatus>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"datumWijzigingStatus\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/externeurl>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"externeURL\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/testrapportmoetgecontroleerdworden>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"testrapportMoetGecontroleerdWorden*\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/versieomschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"versieomschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/europesestatus>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"europeseStatus\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/functioneeltoepassingsgebied>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"functioneelToepassingsgebied\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/lijststatus>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"lijstStatus\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/organisatorischwerkingsgebied>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"organisatorischWerkingsgebied \"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/toepassing-standaard/indicatieverplicht>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"indicatieVerplicht\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/externeurlproductpagina>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"externeURLProductpagina\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/objectomschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"objectomschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/voorzieningnaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"voorzieningnaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/voorzieningstype>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"voorzieningstype\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/leveranciersorganisatierol>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"leveranciersorganisatierol\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/naam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"naam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/omschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"omschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/bbn-score>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"BBN-score\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/beheerder>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"beheerder\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/datuminwerktreding>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"datumInwerktreding\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/isbedrijfskritisch>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"isBedrijfskritisch\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/isprivacygevoeligevoorziening>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"isPrivacygevoeligeVoorziening\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/mutatiedatum>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"mutatiedatum\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/opgavepakketversie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"opgavePakketversie\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/status>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"status\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/einddatumondersteuning>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"einddatumOndersteuning\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/productiedatum>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"productieDatum\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/releasenotes>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"releaseNotes\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versienaam>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"versienaam\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versienummer>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"versienummer\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versieomschrijving>
-    a <https://www.softwarecatalogus.nl/ns/mim#Attribuutsoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"versieomschrijving\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#kardinaliteit> "\"1..1\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/biv-classificatiegegevens>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"BIV-classificatiegegevens\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/biv-classificatiegegevens/beschikbaarheid>, <https://www.softwarecatalogus.nl/model/attribuutsoort/biv-classificatiegegevens/integriteit>, <https://www.softwarecatalogus.nl/model/attribuutsoort/biv-classificatiegegevens/vertrouwelijkheid> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/contactgegevens>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Contactgegevens\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/achternaam>, <https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/email>, <https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/tussenvoegsel>, <https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/voornaam> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/contract>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Contract\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/afloopdatum>, <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/contractnummer>, <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/ingangsdatum>, <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/titel> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/earootclass>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"EARootClass\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/externe-bronnenlijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Externe Bronnenlijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/gebruikersaccount>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Gebruikersaccount\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersaccount/gebruikersnaam>, <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersaccount/wachtwoord> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/gebruikersorganisatie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Gebruikersorganisatie\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/gebruikersrol>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Gebruikersrol\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersrol/isaanspreekpunt>, <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersrol/roltype> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/gebruikstatuslijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Gebruikstatuslijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/grondslaglijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Grondslaglijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/koppeling>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Koppeling\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/koppeling/isintermediair>, <https://www.softwarecatalogus.nl/model/attribuutsoort/koppeling/typekoppeling> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/kwetsbaarheid>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Kwetsbaarheid\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/kwetsbaarheid/kwetsbaarheidbeschrijving> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/leveranciersorganisatie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Leveranciersorganisatie\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/leveranciersroltypelijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Leveranciersroltypelijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/organisatie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Organisatie\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/organisatie/kvk-nummer>, <https://www.softwarecatalogus.nl/model/attribuutsoort/organisatie/organisatienaam> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/organisatietype>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Organisatietype\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/organisatietype/organisatietypenaam> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/organisatietypelijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Organisatietypelijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/referentiearchitectuur>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Referentiearchitectuur\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur/referentiearchitectuurnaam> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/referentiearchitectuur-namenlijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Referentiearchitectuur Namenlijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/referentieconcept>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Referentieconcept\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/datumwijzigingstatus>, <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/externeurl>, <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/naam>, <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/omschrijving>, <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/referentieconcepttype>, <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/status> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/referentieconcepttypelijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Referentieconcepttypelijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/referentierelatie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Referentierelatie\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/naam>, <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/objectid>, <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/omschrijving>, <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/referentierelatietype> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/referentierelatietypelijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Referentierelatietypelijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/review>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Review\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/review/reviewtekst>, <https://www.softwarecatalogus.nl/model/attribuutsoort/review/testrapporturl>, <https://www.softwarecatalogus.nl/model/attribuutsoort/review/titel> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/risicoanalyse>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Risicoanalyse\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/risicoanalyse/maatregelbeschrijving>, <https://www.softwarecatalogus.nl/model/attribuutsoort/risicoanalyse/risicobeschrijving> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/roltypelijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Roltypelijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/sector>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Sector\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/sector/omschrijving>, <https://www.softwarecatalogus.nl/model/attribuutsoort/sector/volledigenaam> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/standaard>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Standaard\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/beheerorganisatie>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/grondslag>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/modelreferentie>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/omschrijving>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/standaardtype>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/standaardversie>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/volledigenaam> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/standaardtypelijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Standaardtypelijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/standaardversie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Standaardversie\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/compliancyinstrument>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/compliancyinstrumenturl>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/datumwijzigingstatus>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/externeurl>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/testrapportmoetgecontroleerdworden>, <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/versieomschrijving> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/statusgegevens>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Statusgegevens\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/europesestatus>, <https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/functioneeltoepassingsgebied>, <https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/lijststatus>, <https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/organisatorischwerkingsgebied> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/statuslijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Statuslijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/toepassing-standaard>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Toepassing Standaard\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/toepassing-standaard/indicatieverplicht> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/voorziening>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Voorziening\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/externeurlproductpagina>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/objectomschrijving>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/voorzieningnaam>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/voorzieningstype> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/voorzieningaanbod>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Voorzieningaanbod\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/leveranciersorganisatierol>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/naam>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/omschrijving> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/voorzieninggebruik>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Voorzieninggebruik\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/bbn-score>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/beheerder>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/datuminwerktreding>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/isbedrijfskritisch>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/isprivacygevoeligevoorziening>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/mutatiedatum>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/opgavepakketversie>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/status> .
-
-<https://www.softwarecatalogus.nl/model/objecttype/voorzieningstypelijst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Voorzieningstypelijst\"" .
-
-<https://www.softwarecatalogus.nl/model/objecttype/voorzieningversie>
-    a <https://www.softwarecatalogus.nl/ns/mim#Objecttype> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"Voorzieningversie\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftAttribuutsoort> <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/einddatumondersteuning>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/productiedatum>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/releasenotes>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versienaam>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versienummer>, <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versieomschrijving> .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/afkomstig-uit>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"afkomstig uit\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/behoort-tot>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"behoort tot\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/beschrijft>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"beschrijft\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/betreft>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"betreft\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/heeft>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"heeft\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/heeft-betrekking-op>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"heeft betrekking op\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/heeft-koppeling-met>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"heeft koppeling met\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/hoort-bij>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"hoort bij\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/is-onderdeel-van>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"is onderdeel van\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/is-standaardisatieauthoriteit-van>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"is standaardisatieauthoriteit van\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/omvat>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"omvat\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/ondersteunt>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"ondersteunt\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/plaatst>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"plaatst\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/registreert>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"registreert\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/wordt-afgesloten-door>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"wordt afgesloten door\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
-
-<https://www.softwarecatalogus.nl/model/relatiesoort/wordt-uitgegeven-als>
-    a <https://www.softwarecatalogus.nl/ns/mim#Relatiesoort> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "\"wordt uitgegeven als\"" ;
-    <https://www.softwarecatalogus.nl/ns/mim#authentiek> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnGeldigheid> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#heeftTijdlijnRegistratie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieAfleidbaar> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieClassificerend> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieFormeleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#indicatieMaterieleHistorie> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" ;
-    <https://www.softwarecatalogus.nl/ns/mim#mogelijkGeenWaarde> "\"false\"^^<http://www.w3.org/2001/XMLSchema#boolean>" .
+@prefix shape: <https://www.softwarecatalogus.nl/shapes/> .
+
+shape:earootclassShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/earootclass>  .
+
+shape:sectorShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/sector> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/sector/omschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/sector/volledigenaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:gebruikersaccountShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/gebruikersaccount> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersaccount/gebruikersnaam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersaccount/persoonsgegevens>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersaccount/wachtwoord>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:contactgegevensShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/contactgegevens> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/achternaam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/email>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/tussenvoegsel>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contactgegevens/voornaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:roltypelijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/roltypelijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/roltypelijst/administrator>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/roltypelijst/beheerder>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/roltypelijst/raadpleger>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:gebruikersrolShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/gebruikersrol> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersrol/isaanspreekpunt>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersrol/roltype>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:organisatieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/organisatie> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/organisatie/kvk-nummer>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/organisatie/organisatienaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:organisatietypelijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/organisatietypelijst>  .
+
+shape:organisatietypeShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/organisatietype> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/organisatietype/organisatietypenaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:koppelingShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/koppeling> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/koppeling/isintermediair>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/koppeling/typekoppeling>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:leveranciersorganisatieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/leveranciersorganisatie>  .
+
+shape:leveranciersroltypelijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/leveranciersroltypelijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/leveranciersroltypelijst/beheerder>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/leveranciersroltypelijst/leverancier>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/leveranciersroltypelijst/producent>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:voorzieningaanbodShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/voorzieningaanbod> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/leveranciersorganisatierol>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/naam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/omschrijving>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:voorzieningversieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/voorzieningversie> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/einddatumondersteuning>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/productiedatum>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/releasenotes>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versienaam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versienummer>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versieomschrijving>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:kwetsbaarheidShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/kwetsbaarheid> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/kwetsbaarheid/kwetsbaarheidbeschrijving>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:voorzieningstypelijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/voorzieningstypelijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningstypelijst/dienst>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningstypelijst/externpakket>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningstypelijst/infrastructuur>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningstypelijst/koppeling>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningstypelijst/software>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:voorzieningShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/voorziening> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/externeurlproductpagina>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/objectomschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/voorzieningnaam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/voorzieningstype>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:risicoanalyseShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/risicoanalyse> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/risicoanalyse/maatregelbeschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/risicoanalyse/risicobeschrijving>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:gebruikersorganisatieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/gebruikersorganisatie>  .
+
+shape:reviewShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/review> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/review/reviewtekst>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/review/testrapporturl>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/review/titel>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:voorzieninggebruikShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/voorzieninggebruik> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/bbn-score>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/beheerder>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/biv-classificatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/datuminwerktreding>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/ibp-risico>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/isbedrijfskritisch>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/isprivacygevoeligevoorziening>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/mutatiedatum>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/opgavepakketversie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/status>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:gebruikstatuslijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/gebruikstatuslijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikstatuslijst/ingebruik>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikstatuslijst/uitgefaseerd>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:contractShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/contract> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/afloopdatum>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/contractnummer>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/ingangsdatum>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/titel>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:biv-classificatiegegevensShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/biv-classificatiegegevens> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/biv-classificatiegegevens/beschikbaarheid>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/biv-classificatiegegevens/integriteit>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/biv-classificatiegegevens/vertrouwelijkheid>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:referentiearchitectuurShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/referentiearchitectuur> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur/referentiearchitectuurnaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:referentieconceptShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/referentieconcept> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/datumwijzigingstatus>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/externeurl>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/naam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/omschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/referentieconcepttype>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/status>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:statuslijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/statuslijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/statuslijst/archief>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/statuslijst/geldend>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/statuslijst/inbehandeling>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/statuslijst/inontwikkeling>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:referentieconcepttypelijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/referentieconcepttypelijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcepttypelijst/applicatiecomponent>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcepttypelijst/applicatiefunctie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcepttypelijst/applicatieinterface>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcepttypelijst/applicatieservice>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcepttypelijst/bedrijfsfunctie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcepttypelijst/bedrijfsobject>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcepttypelijst/bedrijfsproces>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcepttypelijst/data-object>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcepttypelijst/referentiecomponent>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:standaardversieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/standaardversie> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/compliancyinstrument>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/compliancyinstrumenturl>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/datumwijzigingstatus>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/externeurl>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/status>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/testrapportmoetgecontroleerdworden>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/versieomschrijving>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:statusgegevensShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/statusgegevens> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/europesestatus>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/functioneeltoepassingsgebied>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/lijststatus>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/statusgegevens/organisatorischwerkingsgebied>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:referentiearchitectuur-namenlijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/referentiearchitectuur-namenlijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur-namenlijst/fora>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur-namenlijst/gemma>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur-namenlijst/hora>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur-namenlijst/mora>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur-namenlijst/nora>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur-namenlijst/pura>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur-namenlijst/rosa>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur-namenlijst/vera>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur-namenlijst/wilma>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:referentierelatietypelijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/referentierelatietypelijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/compositierelatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/aggregatierelatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/toewijzingrelatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/realisatierelatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/diendende-relatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/toegangsrelatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/invloedsrelatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/associatierelatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/triggerende-relatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/specialisatierelatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/stroomrelatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatietypelijst/groepering>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:referentierelatieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/referentierelatie> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/naam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/objectid>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/omschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentierelatie/referentierelatietype>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:toepassing-standaardShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/toepassing-standaard> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/toepassing-standaard/indicatieverplicht>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:standaardtypelijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/standaardtypelijst>  .
+
+shape:standaardShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/standaard> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/beheerorganisatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/grondslag>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/modelreferentie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/omschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/standaardtype>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/standaardversie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/volledigenaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:grondslaglijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/grondslaglijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/grondslaglijst/aanbevolen>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/grondslaglijst/geen>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/grondslaglijst/verplicht>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:externe-bronnenlijstShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/externe-bronnenlijst> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/bronnaam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/toelichting>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/beheerorganisatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/bronlocatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/apibeschikbaarheid>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/apilocatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/apibeschrijvingbeschikbaarheid>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/gegevensstandaardnaam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/gegevensstandaardbeschikbaarheid>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/externe-bronnenlijst/bronkwaliteit>
+    ; sh:datatype xsd:string
+  ]
+ .
 
