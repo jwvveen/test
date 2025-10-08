@@ -1,0 +1,328 @@
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix base: <https://www.softwarecatalogus.nl/model/> .
+@prefix shape: <https://www.softwarecatalogus.nl/shapes/> .
+
+@prefix sh:  <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix base: <https://www.softwarecatalogus.nl/model/> .
+@prefix shape: <https://www.softwarecatalogus.nl/shapes/> .
+
+shape:sectorShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/sector> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/sector/omschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/sector/volledigenaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:gebruikersaccountShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/gebruikersaccount> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersaccount/gebruikersnaam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/gebruikersaccount/wachtwoord>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:organisatieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/organisatie> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/organisatie/kvk-nummer>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/organisatie/organisatienaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:organisatietypeShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/organisatietype> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/organisatietype/organisatietypenaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:koppelingShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/koppeling> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/koppeling/isintermediair>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/koppeling/typekoppeling>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:leveranciersorganisatieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/leveranciersorganisatie>  .
+
+shape:voorzieningaanbodShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/voorzieningaanbod> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/leveranciersorganisatierol>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/naam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningaanbod/omschrijving>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:voorzieningversieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/voorzieningversie> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/einddatumondersteuning>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/productiedatum>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/releasenotes>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versienaam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versienummer>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieningversie/versieomschrijving>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:kwetsbaarheidShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/kwetsbaarheid> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/kwetsbaarheid/kwetsbaarheidbeschrijving>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:voorzieningShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/voorziening> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/externeurlproductpagina>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/objectomschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/voorzieningnaam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorziening/voorzieningstype>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:gebruikersorganisatieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/gebruikersorganisatie>  .
+
+shape:reviewShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/review> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/review/reviewtekst>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/review/testrapporturl>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/review/titel>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:voorzieninggebruikShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/voorzieninggebruik> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/bbn-score>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/beheerder>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/datuminwerktreding>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/isbedrijfskritisch>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/isprivacygevoeligevoorziening>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/mutatiedatum>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/opgavepakketversie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/voorzieninggebruik/status>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:contractShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/contract> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/afloopdatum>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/contractnummer>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/ingangsdatum>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/contract/titel>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:referentiearchitectuurShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/referentiearchitectuur> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentiearchitectuur/referentiearchitectuurnaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:referentieconceptShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/referentieconcept> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/datumwijzigingstatus>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/externeurl>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/naam>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/omschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/referentieconcepttype>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/referentieconcept/status>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:standaardversieShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/standaardversie> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/compliancyinstrument>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/compliancyinstrumenturl>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/datumwijzigingstatus>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/externeurl>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/testrapportmoetgecontroleerdworden>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaardversie/versieomschrijving>
+    ; sh:datatype xsd:string
+  ]
+ .
+
+shape:standaardShape a sh:NodeShape ;
+  sh:targetClass <https://www.softwarecatalogus.nl/model/objecttype/standaard> ;
+  sh:property 
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/beheerorganisatie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/grondslag>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/modelreferentie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/omschrijving>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/standaardtype>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/standaardversie>
+    ; sh:datatype xsd:string
+  ] ,
+  [
+    sh:path <https://www.softwarecatalogus.nl/model/attribuutsoort/standaard/volledigenaam>
+    ; sh:datatype xsd:string
+  ]
+ .
+
