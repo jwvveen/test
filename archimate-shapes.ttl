@@ -1,0 +1,260 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+
+# Pas deze twee IRI's aan jouw eigen namespace aan:
+@prefix ameff:   <http://example.com/archimate/ameff#> .
+@prefix ameffsh: <http://example.com/archimate/ameff/shapes#> .
+
+#################################################################
+# 1. GENERIEKE ELEMENT-CONSTRAINTS (geldt voor alle ArchiMate-
+#    elementen in je AMEFF laag)
+#################################################################
+
+ameffsh:ElementShape
+    a sh:NodeShape ;
+    sh:targetClass ameff:Element ;
+
+    # Identifier verplicht, string, niet-lege waarde
+    sh:property [
+        sh:path ameff:identifier ;
+        sh:name "Element identifier"@en ;
+        sh:description "Every ArchiMate element must have a non-empty identifier."@en ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:pattern ".+"
+    ] ;
+
+    # Naam verplicht, vrije literal
+    sh:property [
+        sh:path ameff:name ;
+        sh:name "Element name"@en ;
+        sh:description "Every ArchiMate element must have a name."@en ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype rdf:langString
+    ] ;
+
+    # Documentatie optioneel, maar als hij er is dan literal
+    sh:property [
+        sh:path ameff:documentation ;
+        sh:name "Element documentation"@en ;
+        sh:description "Optional documentation as free text."@en ;
+        sh:datatype rdfs:Literal ;
+        sh:maxCount 1
+    ] ;
+
+    # hasProperty moet altijd naar ameff:Property verwijzen
+    sh:property [
+        sh:path ameff:hasProperty ;
+        sh:name "Element property link"@en ;
+        sh:description "If present, hasProperty must point to a Property instance."@en ;
+        sh:nodeKind sh:IRIOrLiteral ;    # meestal IRI of blank node, is afhankelijk van je implementatie
+        sh:class ameff:Property ;
+    ] .
+
+# Extra target: elke node die een identifier heeft moet ook aan ElementShape voldoen,
+# zelfs als rdf:type ameff:Element ontbreekt.
+ameffsh:ElementByIdentifierShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:identifier ;
+    sh:node ameffsh:ElementShape .
+
+#################################################################
+# 2. PROPERTY-CONCEPTEN (ameff:Property)
+#################################################################
+
+ameffsh:PropertyShape
+    a sh:NodeShape ;
+    sh:targetClass ameff:Property ;
+
+    # Je ontologie definieert nog geen details voor properties;
+    # hieronder een generiek patroon dat je naar wens kunt aanscherpen
+    sh:property [
+        sh:path ameff:name ;
+        sh:name "Property name"@en ;
+        sh:description "Property should have a name."@en ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype rdf:langString
+    ] ;
+
+    sh:property [
+        sh:path ameff:documentation ;
+        sh:name "Property value / documentation"@en ;
+        sh:description "Free-text value or documentation for the property."@en ;
+        sh:maxCount 1 ;
+        sh:datatype rdfs:Literal
+    ] .
+
+#################################################################
+# 3. GENERIEK RELATIE-CONCEPT (ameff:Relationship)
+#    - elk subject van een ArchiMate-relatie moet getypeerd zijn
+#      als ameff:Relationship
+#    - targets van relaties moeten ameff:Element zijn
+#################################################################
+
+# Helper: lijst met alle relatie-predicaten uit jouw archimate-shacl.owl.
+# (Als je er meer hebt toegevoegd, zet ze er hier bij.)
+ameffsh:AllRelationshipPredicates
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Access ;
+    sh:targetSubjectsOf ameff:Aggregation ;
+    sh:targetSubjectsOf ameff:Assignment ;
+    sh:targetSubjectsOf ameff:Association ;
+    sh:targetSubjectsOf ameff:Composition ;
+    sh:targetSubjectsOf ameff:Flow ;
+    sh:targetSubjectsOf ameff:Influence ;
+    sh:targetSubjectsOf ameff:Realization ;
+    sh:targetSubjectsOf ameff:Serving ;
+    sh:targetSubjectsOf ameff:Specialization .
+
+# 3.1. Subjects van een relatie moeten ameff:Relationship zijn
+ameffsh:RelationshipTypeShape
+    a sh:NodeShape ;
+    sh:targetNode ameffsh:AllRelationshipPredicates ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:name "Relationship type"@en ;
+        sh:description "Subjects of ArchiMate relationships should be typed as ameff:Relationship."@en ;
+        sh:hasValue ameff:Relationship ;
+        sh:minCount 1
+    ] .
+
+#################################################################
+# 4. RELATIE-SPECIFIEKE SHAPES (targets moeten Element zijn)
+#    Je kunt dit herhalen per relatie-type en per specificatie
+#    strenger maken (b.v. alleen bepaalde elementtypen).
+#################################################################
+
+# ACCESS
+ameffsh:AccessShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Access ;
+    sh:property [
+        sh:path ameff:Access ;
+        sh:name "Access target"@en ;
+        sh:description "Access relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+# AGGREGATION
+ameffsh:AggregationShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Aggregation ;
+    sh:property [
+        sh:path ameff:Aggregation ;
+        sh:name "Aggregation target"@en ;
+        sh:description "Aggregation relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+# ASSIGNMENT
+ameffsh:AssignmentShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Assignment ;
+    sh:property [
+        sh:path ameff:Assignment ;
+        sh:name "Assignment target"@en ;
+        sh:description "Assignment relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+# ASSOCIATION
+ameffsh:AssociationShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Association ;
+    sh:property [
+        sh:path ameff:Association ;
+        sh:name "Association target"@en ;
+        sh:description "Association relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+# COMPOSITION
+ameffsh:CompositionShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Composition ;
+    sh:property [
+        sh:path ameff:Composition ;
+        sh:name "Composition target"@en ;
+        sh:description "Composition relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+# FLOW
+ameffsh:FlowShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Flow ;
+    sh:property [
+        sh:path ameff:Flow ;
+        sh:name "Flow target"@en ;
+        sh:description "Flow relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+# INFLUENCE
+ameffsh:InfluenceShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Influence ;
+    sh:property [
+        sh:path ameff:Influence ;
+        sh:name "Influence target"@en ;
+        sh:description "Influence relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+# REALIZATION
+ameffsh:RealizationShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Realization ;
+    sh:property [
+        sh:path ameff:Realization ;
+        sh:name "Realization target"@en ;
+        sh:description "Realization relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+# SERVING
+ameffsh:ServingShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Serving ;
+    sh:property [
+        sh:path ameff:Serving ;
+        sh:name "Serving target"@en ;
+        sh:description "Serving relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
+
+# SPECIALIZATION
+ameffsh:SpecializationShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf ameff:Specialization ;
+    sh:property [
+        sh:path ameff:Specialization ;
+        sh:name "Specialization target"@en ;
+        sh:description "Specialization relationship must point to an ArchiMate Element."@en ;
+        sh:class ameff:Element ;
+        sh:minCount 1 ;
+        sh:maxCount 1
+    ] .
