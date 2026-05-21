@@ -1,4 +1,6 @@
 <archimate:Process
     xmlns:archimate="http://www.archimatetool.com/archimate"
     name="Consultancy"
-    id="id-b1f001d639ae9ee0dff99b83f409ba1d"/>
+    id="id-b1f001d639ae9ee0dff99b83f409ba1d">
+  <properties key="BPMN" value="e67384e74481/consulting_process"/>
+</archimate:Process>

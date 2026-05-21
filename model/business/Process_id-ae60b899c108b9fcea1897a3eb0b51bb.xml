@@ -1,4 +1,6 @@
 <archimate:Process
     xmlns:archimate="http://www.archimatetool.com/archimate"
     name="Productontwikkeling"
-    id="id-ae60b899c108b9fcea1897a3eb0b51bb"/>
+    id="id-ae60b899c108b9fcea1897a3eb0b51bb">
+  <properties key="BPMN" value="1b9301f55a7c/product_development"/>
+</archimate:Process>
