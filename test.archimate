@@ -27,6 +27,7 @@
   <folder name="Relations" id="id-folder-relations" type="relations">
     <element xsi:type="archimate:AssignmentRelationship" id="id-9a5417a43d7f86136c8d03c242688336" source="id-6e6972b48ad3d485a4bdb9e6e3faa7da" target="id-d3554a4036e4f379768164ebadf05e37"/>
     <element xsi:type="archimate:AssignmentRelationship" id="id-1b7c099bf039f967a4848b32533e4908" source="id-d3554a4036e4f379768164ebadf05e37" target="id-b1f001d639ae9ee0dff99b83f409ba1d"/>
+    <element xsi:type="archimate:FlowRelationship" id="id-0aa44b16a70132c3f310dd4a3bc2fdae" source="id-ae60b899c108b9fcea1897a3eb0b51bb" target="id-b1f001d639ae9ee0dff99b83f409ba1d"/>
     <element xsi:type="archimate:AssignmentRelationship" id="id-47ce310b2c582bacb2c3b4860e092a57" source="id-57002662ec6a3d378505a717b96e0e3c" target="id-ae60b899c108b9fcea1897a3eb0b51bb"/>
     <element xsi:type="archimate:AssignmentRelationship" id="id-c7ae632740f0853c6237d2f1a637e2bf" source="id-6e6972b48ad3d485a4bdb9e6e3faa7da" target="id-57002662ec6a3d378505a717b96e0e3c"/>
   </folder>
@@ -35,10 +36,7 @@
       <child xsi:type="archimate:DiagramObject" id="id-child-48143014b7e9" archimateElement="id-6e6972b48ad3d485a4bdb9e6e3faa7da">
         <bounds x="510" y="90" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-conn-4036b0cc111d" source="id-child-48143014b7e9" target="id-child-3c1e18bf2413" archimateRelationship="id-9a5417a43d7f86136c8d03c242688336"/>
-        <sourceConnection xsi:type="archimate:Connection" id="id-conn-ef109eac6d2d" source="id-child-48143014b7e9" target="id-child-b35a7341ddca" archimateRelationship="id-c7ae632740f0853c6237d2f1a637e2bf">
-          <bendpoint startX="-85" startY="27" endX="85" endY="-72"/>
-          <bendpoint startX="-85" startY="72" endX="85" endY="-27"/>
-        </sourceConnection>
+        <sourceConnection xsi:type="archimate:Connection" id="id-conn-ef109eac6d2d" source="id-child-48143014b7e9" target="id-child-b35a7341ddca" archimateRelationship="id-c7ae632740f0853c6237d2f1a637e2bf"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-child-3c1e18bf2413" targetConnections="id-conn-4036b0cc111d" archimateElement="id-d3554a4036e4f379768164ebadf05e37">
         <bounds x="510" y="190" width="120" height="55"/>
@@ -46,8 +44,9 @@
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-child-03e1438e341a" targetConnections="id-conn-b502214cde1c" archimateElement="id-ae60b899c108b9fcea1897a3eb0b51bb">
         <bounds x="330" y="300" width="159" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-conn-923a2d677fe6" source="id-child-03e1438e341a" target="id-child-b7142c2b4c82" archimateRelationship="id-0aa44b16a70132c3f310dd4a3bc2fdae"/>
       </child>
-      <child xsi:type="archimate:DiagramObject" id="id-child-b7142c2b4c82" targetConnections="id-conn-41debfa49cbd" archimateElement="id-b1f001d639ae9ee0dff99b83f409ba1d">
+      <child xsi:type="archimate:DiagramObject" id="id-child-b7142c2b4c82" targetConnections="id-conn-41debfa49cbd id-conn-923a2d677fe6" archimateElement="id-b1f001d639ae9ee0dff99b83f409ba1d">
         <bounds x="520" y="300" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-child-b35a7341ddca" targetConnections="id-conn-ef109eac6d2d" archimateElement="id-57002662ec6a3d378505a717b96e0e3c">
