@@ -54,6 +54,10 @@
         <bounds x="340" y="190" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-conn-b502214cde1c" source="id-child-b35a7341ddca" target="id-child-03e1438e341a" archimateRelationship="id-47ce310b2c582bacb2c3b4860e092a57"/>
       </child>
+      <child xsi:type="archimate:Note" id="id-child-a761a9e3a1fb">
+        <bounds x="40" y="30" width="120" height="55"/>
+        <content>Testview</content>
+      </child>
     </element>
   </folder>
 </archimate:model>
